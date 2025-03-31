@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Voice Chat</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+  <div class="chat-wrapper">
+    <!-- Top bar / Header -->
+    <div class="chat-header">
+      <div class="chat-title">Voice Assistant</div>
+    </div>
+
+    <!-- Chat container -->
+    <div id="chat-container" class="chat-container">
+      <!-- Chat messages will be appended here -->
+    </div>
+
+    <!-- Bottom bar with record button -->
+    <div class="chat-footer">
+      <div id="record-button" class="record-button" title="Record Voice">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="#fff">
+          <path d="M12 3C10.34 3 9 4.34 9 6V12C9 13.66 10.34 15 12 15C13.66 15 15 13.66 15 12V6C15 4.34 13.66 3 12 3ZM19 11C19 7.13 15.87 4 12 4C8.13 4 5 7.13 5 11V12C5 15.87 8.13 19 12 19C15.87 19 19 15.87 19 12V11ZM17.5 12C17.5 15.03 15.03 17.5 12 17.5C8.97 17.5 6.5 15.03 6.5 12V11C6.5 7.97 8.97 5.5 12 5.5C15.03 5.5 17.5 7.97 17.5 11V12Z"/>
+        </svg>
+      </div>
+    </div>
+  </div>
+
+  <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

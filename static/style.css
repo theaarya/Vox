@@ -1,0 +1,140 @@
+/* Basic reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Page background */
+body {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  background: #f0f2f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+/* Wrapper for the entire chat */
+.chat-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+  max-width: 90%;
+  height: 600px;
+  background: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 3px 8px rgba(0,0,0,0.15);
+}
+
+/* Top bar */
+.chat-header {
+  background: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  padding: 12px 16px;
+}
+
+.chat-title {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+/* Main chat area */
+.chat-container {
+  flex: 1;
+  padding: 16px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Bottom bar */
+.chat-footer {
+  border-top: 1px solid #e5e7eb;
+  padding: 12px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fafafa;
+}
+
+/* Record button styling */
+.record-button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #4a86ff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.record-button:hover {
+  background: #3a74e6;
+}
+
+.record-button.recording {
+  background: #dc3545;
+  animation: pulse 1.2s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(220,53,69, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 16px rgba(220,53,69, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(220,53,69, 0);
+  }
+}
+
+/* Chat bubbles */
+.message-row {
+  display: flex;
+  margin-bottom: 12px;
+}
+
+.message-user {
+  justify-content: flex-end;
+}
+
+.message-assistant {
+  justify-content: flex-start;
+}
+
+.message-bubble {
+  max-width: 70%;
+  padding: 10px 14px;
+  border-radius: 8px;
+  line-height: 1.4;
+  white-space: pre-wrap;
+}
+
+.user-bubble {
+  background: #e2e8f0;
+  color: #333;
+  border-bottom-right-radius: 0;
+}
+
+.assistant-bubble {
+  background: #4a86ff;
+  color: #fff;
+  border-bottom-left-radius: 0;
+}
+
+/* "Processing" status bubble */
+.status-bubble {
+  background: #f3f4f6;
+  color: #777;
+  font-style: italic;
+  margin-bottom: 12px;
+  padding: 8px 12px;
+  text-align: center;
+  border-radius: 8px;
+  align-self: center;
+}

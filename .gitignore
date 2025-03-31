@@ -1,0 +1,13 @@
+# Environment variables
+.env
+
+# Vercel local cache/state
+.vercel/
+
+# Python specific
+__pycache__/
+*.pyc
+
+# OS generated files
+.DS_Store
+Thumbs.db
